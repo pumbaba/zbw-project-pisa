@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>A2P assembly hierarchy visualization</title>
+</head>
+<body>
+<div class="mermaid">
+graph TD
+Servo_S706MG_001(Servo_S706MG_001<br>*FIXED*) -- circularEdge --> Servohalter_001
+Servo_S706MG_001(Servo_S706MG_001<br>*FIXED*) -- circularEdge --> Servohalter_002
+Servo_S706MG_001(Servo_S706MG_001<br>*FIXED*) -- axisParallel --> Servohalter_002
+Servo_S706MG_001(Servo_S706MG_001<br>*FIXED*) -- axisParallel --> Servohalter_001
+Servo_S706MG_001(Servo_S706MG_001<br>*FIXED*) -- circularEdge --> Zahnrad_05_10_001
+Servohalter_001 -- circularEdge --> Boden_001
+Servohalter_002 -- circularEdge --> Boden_001
+Zahnrad_05_10_001
+Arme_001
+Zahnstange_002
+Arme_002
+Zahnstange_001
+Greifklotz_001
+Greifklotz_002
+Gleitlager_8mm_001
+Schlitten_001
+Boden_001 -- circularEdge --> Führungsplatte_001
+Boden_001 -- circularEdge --> Führungsplatte_001
+Führungsplatte_001
+</div>
+    <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.js"></script>
+    <script>
+        mermaid.initialize({startOnLoad: true});
+    </script>
+</body></html>
